@@ -1,0 +1,28 @@
+﻿@model IEnumerable<FirmeIDS.Models.Page>
+@{
+    ViewBag.Title = "ViewPages";
+}
+
+<h2>View all the pages </h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Page Number</th>
+            <th>Flag</th>
+
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var page in Model)
+        {
+            <tr>
+                <td>@page.PageNumber</td>
+                <td>@page.Flag</td>
+              
+
+            </tr>
+        }
+    </tbody>
+</table>

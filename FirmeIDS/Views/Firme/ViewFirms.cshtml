@@ -1,0 +1,50 @@
+﻿@model IEnumerable<FirmeIDS.Models.Firma>
+@{
+    ViewBag.Title = "ViewFirms";
+}
+    <br />
+@using (Html.BeginForm("Upload", "Excel", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="form-group">
+        <input type="file" id="dataFile" name="file" />
+    </div>
+
+    <div class="form-group">
+        <input type="submit" name="btnupload" value="Import" class="btn btn-primary" />
+    </div>
+}
+
+<button type="button" class="btn-primary" id="linkbtn">@Html.ActionLink("Export", "Export", "Excel")</button>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Cod</th>
+            <th>Nume</th>
+            <th>Data Infintarii</th>
+            <th>Anul Infintarii</th>
+            <th>Activitate Principala</th>
+            <th>Flag</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var fir in Model)
+        {
+            <tr>
+                <td>@fir.CodFirma</td>
+                <td>@fir.Nume</td>
+                <td>@fir.DataInscrierii</td>
+            <td>@fir.AnulInfintarii</td>
+            <td>@fir.ActivitatePrincipala</td>
+            <td>@fir.Flag</td>
+
+        </tr>
+        }
+    </tbody>
+    </table>
+
+
+
+
+

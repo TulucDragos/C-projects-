@@ -1,0 +1,35 @@
+﻿@model IEnumerable<FirmeIDS.Models.CompleteFirm>
+@{
+    ViewBag.Title = "ViewCompleteFirms";
+}
+
+<h2>ViewCompleteFirms</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Cod</th>
+            <th>Nume</th>
+            <th>Activitate Principala</th>   
+            <th>Sediu Social</th>
+            <th>Telefon</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var fir in Model)
+        {
+            <tr>
+                <td>@fir.CodFirma</td>
+                <td>@fir.Nume</td>
+                <td>@fir.ActivitatePrincipala</td>
+                <td>@fir.SediuSocial</td>
+                <td>@fir.Telefon</td>
+                <td>@fir.Email</td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+

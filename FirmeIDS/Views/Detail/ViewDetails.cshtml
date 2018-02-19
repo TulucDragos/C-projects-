@@ -1,0 +1,40 @@
+﻿@model IEnumerable<FirmeIDS.Models.Detail>
+@{
+    ViewBag.Title = "ViewDetails";
+}
+
+
+
+<h2>View The Frims With Their Details</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Cod</th>
+            <th>CIF</th>
+            <th>Sediu Social</th>
+            <th>Adresa</th>
+            <th>Administrator</th>
+            <th>Telefon</th>
+            <th>Email</th>
+
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var fir in Model)
+        {
+            <tr>
+                <td>@fir.CodFirma</td>
+                <td>@fir.CIF</td>
+                <td>@fir.SediuSocial</td>
+                <td>@fir.Adresa</td>
+                <td>@fir.Administrator</td>
+                <td>@fir.Telefon</td>
+                <td>@fir.Email</td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+

@@ -1,0 +1,29 @@
+﻿@model IEnumerable<FirmeIDS.Models.FirmaDTO>
+@{
+    ViewBag.Title = "ViewSpanFirms";
+}
+
+
+<h2>View Span Firms</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Cod</th>
+            <th>Nume</th>
+            <th>Flag</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var fir in Model)
+        {
+            <tr>
+                <td>@fir.CodFirma</td>
+                <td>@fir.Nume</td>
+                <td>@fir.Flag</td>
+
+            </tr>
+        }
+    </tbody>
+</table>
